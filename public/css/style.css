@@ -1,0 +1,106 @@
+:root{
+    --mainColor:#f4ece9;
+    --whitebackground:#fff;
+}
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+body{
+  background:#e6d9d9;
+}
+.fff{
+  display: block;
+  margin-left: -150px;
+}
+.row{
+  width: 800px;
+}
+html {
+    font-family: "Montserrat";
+}
+* {box-sizing: border-box;}
+
+section.form{
+    margin: 40px 100px 10px 100px;
+}
+label{
+  margin-top: 20px;
+}
+input[type=text],input[type=number],
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f4ece9;
+  padding: 20px;
+}
+.seeService{
+    height:60vh;
+    width:80%;
+    margin:auto;
+    /* background-color:var(--mainColor); */
+    border-radius: 30px 30px 30px 30px;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+.seeService p{
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+    font-size: medium;
+    /* width: 500px; */
+    /* position: relative; */
+}
+.serviceButton {
+    margin-top: 30px;
+    /* align-items: center;  */
+    text-align: center;
+    font-size: 30px;
+    background-color: #e08867;
+    margin-left:37% ;
+    border-radius: 5px;
+    font-weight: 200;
+    color: white;
+    padding: 7px;
+    border-style: none;
+}
+.serviceButton:hover{
+    box-shadow: 2px 4px 4px 0px grey;
+}
+h3{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: lighter;
+}
+.required{
+  color: red;
+}
+.sub{
+  display:block;
+}

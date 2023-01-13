@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <section class="form">
+        <h3>Contact Form</h3>
+<div class="container">
+  <form class="fff" id="contactForm" onsubmit="return validation()">
+      <div class="row">
+        <label for="fname">First Name<span class="required">*</span></label>
+        <input type="text" id="fname" name="firstname" placeholder="Your First name.." autocomplete="off">
+        <span id="userfname" class="text-danger font-weight-bold"></span>
+      </div>
+      <div class="row">
+        <label for="lname">Last Name<span class="required">*</span></label>
+        <input type="text" id="lname" name="lastname" placeholder="Your Last name.." autocomplete="off">
+        <span id="userlname" class="text-danger font-weight-bold"></span>
+      </div>
+
+      <div class="row">
+        <label for="country">Country Name<span class="required">*</span></label>
+        <input type="text" id="nameCountry" name="country" placeholder="Country Name" autocomplete="off">
+        <span id="countryName" class="text-danger font-weight-bold"></span>
+      </div>
+
+      <div class="row">
+        <label for="emailname">Email Id<span class="required">*</span></label>
+        <input type="email" id="emailname" name="enteremail" placeholder="Email Id" autocomplete="off">
+        <span id="emailId" class="text-danger font-weight-bold"></span>
+      </div>
+
+      <div class="row">
+        <label for="phone">Phone Number<span class="required">*</span></label>
+        <input type="number" id="phone" name="phoneNumber" placeholder="Phone number" autocomplete="off">
+        <span id="phNumber" class="text-danger font-weight-bold"></span>
+      </div>
+      
+      <div class="row">
+        <label class="sub" for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <input type="submit" value="Submit" autocomplete="off">
+      </div>
+      
+    </form>
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <!-- <div class="container"></div> -->
+    <footer>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">About</h2>
+          <ul>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Resources</h2>
+          <ul>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">eBooks</a></li>
+            <li><a href="#">Webinars</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contact</h2>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Stay Updated</h2>
+          <p>Subscribe to our newsletter to get our latest news.</p>
+          <form>
+            <input type="email" name="email" placeholder="Enter email address">
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </section>
+    
+      <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list">
+          <!-- <li><a href="#"><i class="fab fa-facebook"></i></a></li> -->
+          <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </section>
+    
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li>&copy; 2021 Copyright G1 incorp.</li>
+        </ul>
+      </section>
+    </footer>
+
+    <script type="text/javascript">
+
+        function validation(){
+          var fname = document.getElementById('fname').value;
+          var lname = document.getElementById('lname').value;
+          var email = document.getElementById('emailname').value;
+          var phone = document.getElementById('phone').value;
+          // var password = document.getElementById('pass').value;
+          // var confirmPass = document.getElementById('confirm').value;
+
+
+          if(fname == ""){
+            document.getElementById('userfname').innerHTML=" * Please fill your first name";
+            // alert(" * Enter your name")
+            return false;
+          }
+          if(fname.length<3||fname.length>20){
+            document.getElementById('userfname').innerHTML=" * Name length should be between 3 to 20";
+            // alert(" * Name length should be between 3 to 20")
+            return false;
+          }
+          if(!isNaN(fname)){
+            document.getElementById('userfname').innerHTML=" * Name cannot be a number";
+            // alert(" * Name cannot be a number");
+            return false;
+          }
+          if(document.getElementById('userfname').innerHTML.length>0){
+            document.getElementById('userfname').innerHTML="";
+          }
+
+          if(lname == ""){
+            document.getElementById('userlname').innerHTML=" * Please fill your last name";
+            // alert("Enter your last name");
+            return false;
+          }
+          if(lname.length<3||lname.length>20){
+            document.getElementById('userlname').innerHTML=" * Name length should be between 3 to 20";
+            // alert("Name length should be between 3 to 20")
+            return false;
+          }
+          if(!isNaN(lname)){
+            document.getElementById('userlname').innerHTML=" * Name cannot be a number";
+            // alert(" * Name cannot be a number");
+            return false;
+          }
+          if(document.getElementById('userlname').innerHTML.length>0){
+            document.getElementById('userlname').innerHTML="";
+          }
+
+
+          if(email == ""){
+            document.getElementById('emailId').innerHTML=" * Please fill your email id";
+            // alert(" * Please fill your email id");
+            return false;
+          }
+          if(email.indexOf('@')<=0){
+            document.getElementById('emailId').innerHTML=" * Enter valid email id";
+            // alert(" * Enter valid email id");
+            return false;
+          }
+          if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+            document.getElementById('emailId').innerHTML=" * Please enter valid domain like .com or .in";
+            // alert(" * Please enter valid domain (eg: '.com' or '.in'");
+            return false;
+          }
+          if(document.getElementById('emailId').innerHTML.length>0){
+            document.getElementById('emailId').innerHTML="";
+          }
+
+
+          if(phone == ""){
+            document.getElementById('phNumber').innerHTML=" * Enter your contact number";
+            // alert(" * Enter your contact number");
+            return false;
+          }
+          if(isNaN(phone)){
+            document.getElementById('phNumber').innerHTML=" * Please enter valid number";
+            // alert(" * Please enter valid number");
+            return false;
+          }
+          if(phone.length!=10){
+            document.getElementById('phNumber').innerHTML=" * Please enter valid number";
+            // alert(" * Please enter valid number");
+            return false;
+          }
+          if(document.getElementById('phNumber').innerHTML.length>0){
+            document.getElementById('phNumber').innerHTML="";
+          }
+
+        //If all cases pass then it will submit result in database with method POST and action /add
+        alert("Form Submitted Successfully☻");
+        
+        document.getElementById('contactForm').method="POST";
+        document.getElementById('contactForm').action="/add";
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>
